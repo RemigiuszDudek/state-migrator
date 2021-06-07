@@ -1,0 +1,26 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'groovy'
+}
+
+group = 'com.github.remigiuszdudek.statemigrator.plugin'
+version = project.parent.version
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+gradlePlugin {
+    plugins {
+        simplePlugin {
+            id = 'com.remigiuszdudek.statemigrator'
+            implementationClass = 'com.github.remigiuszdudek.statemigrator.plugin.StateMigratorPlugin'
+        }
+    }
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.7'
+    testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+}

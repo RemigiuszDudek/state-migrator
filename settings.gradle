@@ -1,1 +1,3 @@
 rootProject.name = 'state-migrator'
+include 'state-migrator-api'
+include 'state-migrator-plugin'

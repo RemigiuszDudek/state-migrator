@@ -1,0 +1,15 @@
+plugins {
+    id 'groovy'
+}
+
+group = 'com.github.remigiuszdudek.statemigrator.api'
+version = project.parent.version
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.8'
+}
