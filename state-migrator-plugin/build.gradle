@@ -5,7 +5,6 @@ plugins {
 
 group = 'com.github.remigiuszdudek.statemigrator.plugin'
 version = project.parent.version
-sourceCompatibility = '11'
 
 repositories {
     mavenCentral()
@@ -21,6 +20,16 @@ gradlePlugin {
 }
 
 dependencies {
+    implementation project(':state-migrator-api')
+    implementation 'org.reflections:reflections:0.9.11'
     implementation 'org.codehaus.groovy:groovy-all:3.0.7'
+
+    testImplementation 'org.spockframework:spock-junit4:2.0-groovy-3.0'
     testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'commons-io:commons-io:2.9.0'
+}
+
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
 }

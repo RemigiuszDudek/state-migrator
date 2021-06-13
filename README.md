@@ -13,6 +13,7 @@ state-migrator {
     artifact {
         package 'com.example'
     }
+    statePackageScan 'com.example.state'
     minSupportedVersion '3.7.0.0'
 }
 ```
